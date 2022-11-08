@@ -90,7 +90,7 @@ functions:
 resources:
   Resources:
     PostsTable:
-      Type: AWS::DynamoDB::TABLE
+      Type: AWS::DynamoDB::Table
       Properties:
         TableName: ${custom.postsTableName}
         AttributeDefinitions:
