@@ -28,7 +28,7 @@ functions:
       - Effect: 'Allow'
         Action:
           - 'dynamodb:GetItem' 
-        Resource: !GetAttr PostsTable.Arn
+        Resource: !GetAtt PostsTable.Arn
   createPost:
     handler: api.createPost
     name: create-post
