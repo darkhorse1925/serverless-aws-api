@@ -42,7 +42,7 @@ functions:
       - Effect: 'Allow'
         Action:
           - 'dynamodb:PutItem' 
-        Resource: !GetAttr PostsTable.Arn
+        Resource: !GetAtt PostsTable.Arn
   updatePost:
     handler: api.updatePost
     name: update-post
@@ -56,7 +56,7 @@ functions:
       - Effect: 'Allow'
         Action:
           - 'dynamodb:UpdateItem' 
-        Resource: !GetAttr PostsTable.Arn
+        Resource: !GetAtt PostsTable.Arn
   deletePost:
     handler: api.deletePost
     name: delete-post
@@ -70,7 +70,7 @@ functions:
       - Effect: 'Allow'
         Action:
           - 'dynamodb:DeleteItem' 
-        Resource: !GetAttr PostsTable.Arn
+        Resource: !GetAtt PostsTable.Arn
   getAllPost:
     handler: api.getAllPost
     name: get-all-post
@@ -84,7 +84,7 @@ functions:
       - Effect: 'Allow'
         Action:
           - 'dynamodb:Scan' 
-        Resource: !GetAttr PostsTable.Arn
+        Resource: !GetAtt PostsTable.Arn
 
 
 resources:
